@@ -1,0 +1,23 @@
+.card {
+  border-radius: var(--radius-md);
+  border: var(--border-card);
+  box-shadow: var(--shadow-card);
+  padding: var(--spacing-md);
+  background-color: var(--color-white);
+  transition:
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.cardClickable {
+  cursor: pointer;
+}
+
+.cardClickable:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+.cardClickable:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--spacing-xs);
+}
