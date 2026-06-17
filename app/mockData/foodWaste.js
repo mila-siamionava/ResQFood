@@ -8,6 +8,7 @@ Data obtained from
 
 1. 
 https://api.sallinggroup.com/v1/food-waste/?zip=8000
+using postman
 with zip changing based on information provided below. 
 
 #zip
@@ -22,6 +23,7 @@ with zip changing based on information provided below.
 
 2. 
 https://api.sallinggroup.com/v1/food-waste/?geo=56.154459,10.206777&radius=3
+using postman
 with coordinates changing based on information provided below. 
 
 #coordinates:

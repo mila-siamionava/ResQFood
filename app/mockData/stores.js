@@ -3,6 +3,7 @@ Documentation on how to use this API and other filters it supports
 https://developer.sallinggroup.dev/apireference/stores
 Data obtained from 
 https://api.sallinggroup.com/v2/stores?zip=2000&per_page=10
+using postman
 with zip changing based on information provided below. 
 
 Area codes used for the mock data of the stores
