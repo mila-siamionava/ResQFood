@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   border: var(--border-button);
-  border-radius: var(--radius-sm);
+  border-radius: var(--border-radius-sm);
   cursor: pointer;
   transition:
     background-color var(--transition-fast),
@@ -52,11 +52,12 @@
 /* States */
 
 .button:hover:not(:disabled) {
-  box-shadow: var(--shadow-hover);
+  box-shadow: var(--shadow-elevated-hover);
   transform: translateY(-2px);
 }
 
 .button:active:not(:disabled) {
+  border: var(--border-button-hover);
   transform: translateY(0);
   box-shadow: var(--shadow-card);
 }

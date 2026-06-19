@@ -4,9 +4,9 @@ export default function Button({
   children,
   variant = "primary",
   size = "md",
-  onClick,
-  disabled = false,
+  type = "button",
   className = "",
+  ...props
 }) {
   const variantClass = styles[variant] || styles.primary;
   const sizeClass = styles[size] || styles.md;
@@ -14,8 +14,8 @@ export default function Button({
   return (
     <button
       className={`${styles.button} ${variantClass} ${sizeClass} ${className}`}
-      onClick={onClick}
-      disabled={disabled}
+      type={type}
+      {...props}
     >
       {children}
     </button>
