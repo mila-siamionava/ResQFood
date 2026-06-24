@@ -1,0 +1,100 @@
+.productCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 12rem;
+  border: var(--border-card);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-card);
+  background-color: var(--color-white);
+  overflow: hidden;
+}
+
+.imageWrapper {
+  position: relative;
+  width: min(100%, clamp(9.5rem, 34vw, 12rem));
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  flex-shrink: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-background-secondary);
+}
+
+.productImage {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+  object-position: center;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.productName {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  font-family: var(--font-family-body);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.productPrice {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-sm);
+}
+
+.newPrice {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-brand);
+  font-family: var(--font-family-body);
+}
+
+.originalPrice {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-body);
+  text-decoration: line-through;
+}
+
+.expireAndDiscount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+    font-size: clamp(0.3rem, 6vw, var(--font-size-md));
+  line-height: 1.2;
+  font-family: var(--font-family-body);
+}
+
+.expiration {
+  color: var(--color-text-secondary);
+}
+
+.expired {
+  color: var(--color-error-text);
+}
+
+.discountBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--color-brand);
+  color: var(--color-white);
+  font-weight: 500;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius-full);
+  white-space: nowrap;
+}
