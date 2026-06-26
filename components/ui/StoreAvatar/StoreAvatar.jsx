@@ -16,8 +16,7 @@ export default function StoreAvatar({
       label={label}
       size={size}
       shape="circle"
-      color="white"
-            className={`${styles.storeAvatar} ${brandClass} ${className}`}
+      className={`${styles.storeAvatar} ${brandClass} ${className}`}
     />
   );
 }
