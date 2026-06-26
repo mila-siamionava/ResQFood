@@ -37,9 +37,12 @@ html {
 
 :root {
   /* ==================== COLORS ==================== */
+  /* Base colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
 
   /* Backgrounds */
-  --color-background-page: #ffffff;
+  --color-background-page: var(--color-white);
   --color-background-primary: #002747;
   --color-background-secondary: #93c894;
   --color-background-error: #f4dada;
@@ -48,8 +51,8 @@ html {
   --color-background-warn: #f6f8af;
 
   /* Text Colors */
-  --color-text-primary: #000000;
-  --color-text-primary-inverse: #ffffff;
+  --color-text-primary: var(--color-black);
+  --color-text-primary-inverse: var(--color-white);
   --color-text-success: #14612f;
   --color-text-error: #691212;
   --color-text-muted: #706868;
@@ -101,7 +104,7 @@ html {
 
   /* Label Medium */
   --font-family-label-medium: "Inter", sans-serif;
-  --font-size-label-medium: 1.1; /* 11px */
+  --font-size-label-medium: 1.1rem; /* 11px */
   --font-weight-label-medium: 500; /* Medium */
 
   /* Label Small */
@@ -131,7 +134,7 @@ html {
 
   /* Disclaimer Small */
   --font-family-disclaimer-small: "Inter", sans-serif;
-  --font-size-disclaimer-small: 1.2; /* 12px */
+  --font-size-disclaimer-small: 1.2rem; /* 12px */
   --line-height-disclaimer-small: 0.8rem; /* 8px */
   --font-weight-disclaimer-small: 300; /* Light */
 
@@ -149,4 +152,11 @@ html {
 
   /* Opacity */
   --opacity-disabled: 0.5;
+
+  /* Icons */
+  --color-icon-primary: var(--color-black);
+  --color-icon-primary-inverse: var(--color-white);
+  /* Avatar */
+  --color-avatar-primary: var(--color-black);
+  --color-avatar-primary-inverse: var(--color-white);
 }
