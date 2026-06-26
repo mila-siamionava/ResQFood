@@ -50,7 +50,6 @@ export default function SearchInput() {
           label="Location"
           size="sm"
           shape="none"
-          color="green"
           filled
           className={styles.locationIcon}
         />
@@ -60,6 +59,8 @@ export default function SearchInput() {
           type="text"
           inputMode="numeric"
           maxLength={5}
+          aria-invalid={!!error}
+          aria-describedby={error ? "areaCodeError" : undefined}
           placeholder="Enter your area code"
           value={areaCode}
           onChange={handleChange}
@@ -69,14 +70,17 @@ export default function SearchInput() {
             icon={Search}
             size="sm"
             shape="none"
-            color="green"
             strokeWidth={2.5}
             className={styles.searchIcon}
           />
         </button>
       </div>
 
-      {error && <p className={styles.error}>{error}</p>}
+      {error && (
+        <p id="areaCodeError" className={styles.error}>
+          {error}
+        </p>
+      )}
     </form>
   );
 }

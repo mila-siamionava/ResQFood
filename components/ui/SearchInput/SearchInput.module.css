@@ -1,6 +1,6 @@
 .form {
   width: 100%;
-  max-width: 40rem;
+  max-width: 20rem;
 }
 .label {
   position: absolute;
@@ -24,7 +24,7 @@
 
 .locationIcon {
   font-size: 2rem;
-  color: var(--color-background-accent);
+  color: var(--color-icon-accent);
 }
 
 .input {
@@ -56,7 +56,7 @@
 }
 .searchIcon {
   font-size: 2rem;
-  color: var(--color-background-accent);
+  color: var(--color-icon-accent);
 }
 
 .error {

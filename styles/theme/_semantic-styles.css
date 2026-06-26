@@ -156,6 +156,8 @@ html {
   /* Icons */
   --color-icon-primary: var(--color-black);
   --color-icon-primary-inverse: var(--color-white);
+  --color-icon-accent: var(--color-background-accent);
+
   /* Avatar */
   --color-avatar-primary: var(--color-black);
   --color-avatar-primary-inverse: var(--color-white);
