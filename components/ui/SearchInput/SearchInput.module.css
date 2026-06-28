@@ -2,12 +2,6 @@
   width: 100%;
   max-width: 20rem;
 }
-.label {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
 .inputGroup {
   display: flex;
   align-items: center;
@@ -20,11 +14,6 @@
   border-radius: var(--border-radius-large);
   background-color: var(--color-background-page);
   box-shadow: var(--shadow-card);
-}
-
-.locationIcon {
-  font-size: 2rem;
-  color: var(--color-icon-accent);
 }
 
 .input {
@@ -56,10 +45,10 @@
 }
 .searchIcon {
   font-size: 2rem;
-  color: var(--color-icon-accent);
+  color: var(--color-icon-success);
 }
 
 .error {
-  color: #b42318;
+  color: var(----color-text-error);
   font-size: var(--font-size-body-small);
 }
