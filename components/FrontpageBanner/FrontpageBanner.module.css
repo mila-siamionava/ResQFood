@@ -4,7 +4,7 @@
     display: grid;
 	grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
 	align-items: center;
-	gap: clamp(0.3rem, 1.2vw, 0.9rem);
+	gap: clamp(0.1rem, 0.5vw, 0.9rem);
 }
 
 
@@ -12,15 +12,13 @@
 	width: 100%;
 	max-width: clamp(7.6rem, 35vw, 15.5rem);
 	min-width: 0;
-	min-height: clamp(3.8rem, 26vw, 5rem);
-	box-sizing: border-box;
+	min-height: clamp(3.8rem, 26vw, 7.5rem);
 	border: 1px solid var(--color-border-primary);
 	border-radius: var(--border-radius-small);
 	box-shadow: var(--shadow-card);
 }
 
 .leftRectangle {
-	grid-column: 1;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -52,17 +50,16 @@
 }
 
 .rightRectangle {
-	grid-column: 3;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	justify-self: end;
 	padding: clamp(0.25rem, 1.1vw, 0.9rem);
-	gap: 0.5rem;
+	gap: 0.1rem;
 	text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: clamp(1rem, 3vw, 2.5rem);
+    font-size: clamp(1rem, 4vw, 2.2rem);
 }
 
 .sallingText {
@@ -90,18 +87,15 @@
 	line-height: 1;
 }
 
-.logoImage {
-	width: min(30%, 2.2rem);
-	height: auto;
-}
-
-.resqFoodLogo {
-	width: min(68%, 6rem);
-	height: auto;
-}
-
 .centerLeaf {
-	width: clamp(1.5rem, 5.8vw, 3.2rem);
+	width: clamp(1.5rem, 10vw, 5rem);
 	height: auto;
 	justify-self: center;
+}
+
+@media (min-width: 480px) {
+	.banner {
+		margin-left: 0;
+		margin-right: auto;
+	}	
 }
