@@ -1,39 +1,44 @@
 "use client";
 
-import { MapPin, Search } from "lucide-react";
+import { useState } from "react";
+import { Search } from "lucide-react";
 import Icon from "@/components/ui/Icon/Icon";
 import styles from "./SearchInput.module.css";
 
 export default function SearchInput({
-  value,
-  onChange,
-  onSubmit,
-  placeholder = "Enter your area code",
+  onSearch,
+  placeholder = "Search",
+  maxLength,
+  inputMode = "text",
+  error = "",
 }) {
+  const [searchValue, setSearchValue] = useState("");
+
+  const handleChange = (e) => {
+    setSearchValue(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    onSearch?.(searchValue);
+  };
+
   return (
-    <form className={styles.form} onSubmit={onSubmit}>
-      <label className={styles.label} htmlFor="searchInput">
-        {placeholder}
-      </label>
-
+    <form className={styles.form} onSubmit={handleSubmit}>
       <div className={styles.inputGroup}>
-        <Icon
-          icon={MapPin}
-          size="sm"
-          shape="none"
-          filled
-          className={styles.locationIcon}
-        />
-
         <input
           id="searchInput"
           className={styles.input}
           type="text"
-          inputMode="numeric"
-          maxLength={5}
+          aria-label={placeholder}
           placeholder={placeholder}
-          value={value}
-          onChange={onChange}
+          inputMode={inputMode}
+          maxLength={maxLength}
+          aria-invalid={!!error}
+          aria-describedby={error ? "searchInputError" : undefined}
+          value={searchValue}
+          onChange={handleChange}
         />
 
         <button className={styles.button} type="submit" aria-label="Search">
@@ -46,6 +51,12 @@ export default function SearchInput({
           />
         </button>
       </div>
+
+      {error && (
+        <p id="searchInputError" className={styles.error}>
+          {error}
+        </p>
+      )}
     </form>
   );
 }
