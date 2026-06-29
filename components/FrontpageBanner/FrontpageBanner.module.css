@@ -64,10 +64,8 @@
 
 .sallingText {
     font-weight: 900;
-    color: var(--color-background-primary);
+    color: var(--color-text-salling);
 	margin: 0;
-	width: auto;
-	height: auto;
 	line-height: 1;
 }
 
@@ -82,8 +80,6 @@
     font-weight: 600;
     color: var(--color-text-success);
 	margin: 0;
-	width: auto;
-	height: auto;
 	line-height: 1;
 }
 
