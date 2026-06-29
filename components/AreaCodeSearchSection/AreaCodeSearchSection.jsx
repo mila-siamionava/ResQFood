@@ -1,17 +1,17 @@
 "use client";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
 import AreaCodeSearch from "../AreaCodeSearch/AreaCodeSearch";
 
 export default function AreaCodeSearchSection() {
-  const [areaCode, setAreaCode] = useState("");
+ const router = useRouter();
 
-  const handleAreaSearch = (validateAreaCode) => {
-    setAreaCode(validateAreaCode);
-  };
+  const handleAreaSearch = (validAreaCode) => {
+     router.push(`/stores?zip=${validAreaCode}`);
+    };
+    
   return (
     <section>
       <AreaCodeSearch onAreaCodeSearch={handleAreaSearch} />
-      {areaCode && <p>You search for {areaCode}</p>}
-    </section>
+         </section>
   );
 }
