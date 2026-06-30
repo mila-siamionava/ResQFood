@@ -8,11 +8,11 @@ export default function AreaCodeSearch({ onAreaCodeSearch }) {
 
   const validateAreaCode = (areaCode) => {
     if (!areaCode) {
-      return "Area code is required";
+      return "Area code is required.";
     }
 
     if (!/^\d{4,5}$/.test(areaCode)) {
-      return "Please enter a valid area code";
+      return "Area code must be 4-5 digits.";
     }
 
     return "";
