@@ -15,10 +15,7 @@ export default function StoreList({ data }) {
         const deals = item.clearances.length;
         return (
           <>
-            <div
-              key={item.store.id}
-              className={`${styles.blockStore} will-be-StoreBlock-component`}
-            >
+            <div key={item.store.id} className={`${styles.storeBlock}`}>
               <Link
                 className={styles.link}
                 href={`/storeDetailPage/${item.store.id}`}
