@@ -14,7 +14,9 @@ export default function StoreList({ data }) {
         const deals = item.clearances.length;
         return (
           <>
-            <div className="will-be-StoreBlock-component">
+            <div
+              className={`${styles.blockStore} will-be-StoreBlock-component`}
+            >
               <StoreCard
                 key={item.store.id}
                 name={formattedStore.name}
@@ -26,9 +28,8 @@ export default function StoreList({ data }) {
                 deals={deals}
                 variant="flat"
               />
-              <Carousel
-                className={`${styles.productCarousel} will-be-Carousel-component`}
-              >
+              <div className={styles.divider}></div>
+              <Carousel className={styles.productCarousel}>
                 {item.clearances.map((deal) => (
                   <ProductCard
                     key={deal.offer.ean}

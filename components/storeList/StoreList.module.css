@@ -1,12 +1,6 @@
-.productCarousel {
-  width: 80%;
-  height: 20rem;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-}
-
-.productCarousel > * {
-  flex-shrink: 0;
+.divider {
+  height: 0.2rem;
+  width: 100%;
+  margin: 1rem 0;
+  background-color: #e1d6d6;
 }
