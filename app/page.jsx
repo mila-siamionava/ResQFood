@@ -8,6 +8,7 @@ import InfoList from "@/components/ui/InfoList/InfoList";
 import Message from "@/components/ui/Message/Message";
 import SearchInput from "@/components/ui/SearchInput/SearchInput";
 import { Geolocation } from "@/components/geolocation/Geolocation";
+import InfoSteps from "@/components/infoSteps/InfoSteps";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -110,7 +111,7 @@ export default function Home() {
         />
       </div>
       <div className={styles.section}>
-        <p className={styles.notice}>Start reducing food waste in 3 simple steps:</p>
+        <InfoSteps />
       </div>
     </div>
   );
