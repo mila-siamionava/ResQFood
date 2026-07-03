@@ -12,6 +12,7 @@ export default function FallbackImage({
 	...props
 }) {
 	const [imageSrc, setImageSrc] = useState(src || fallbackSrc);
+	const isShowingFallback = imageSrc === fallbackSrc;
 
 	useEffect(() => {
 		setImageSrc(src || fallbackSrc);
@@ -28,7 +29,7 @@ export default function FallbackImage({
 		<Image
 			{...props}
 			src={imageSrc}
-			alt={alt || "ResQFood"}
+			alt={isShowingFallback ? "" : alt || "ResQFood"}
 			onError={handleError}
 		/>
 	);
