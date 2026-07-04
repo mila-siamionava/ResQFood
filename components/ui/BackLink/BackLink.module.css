@@ -1,0 +1,20 @@
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size-control-md);
+  height: var(--size-control-md);
+  border-radius: var(--border-radius-full);
+  color: var(--color-icon-success);
+  text-decoration: none;
+  transition: background-color var(--transition-fast);
+}
+
+.backLink:hover {
+  background-color: var(--color-background-success);
+}
+
+.backLink:focus-visible {
+  outline: 2px solid var(--color-border-success);
+  outline-offset: var(--spacing-2xs);
+}
