@@ -3,22 +3,23 @@
 import { useState } from "react";
 import Filter from "@/components/filter/Filter";
 import ProductCard from "@/components/product/ProductCard";
+import {
+  getCategoryLabel,
+  getCategoryValue,
+  getUniqueByValue,
+} from "@/utils/productCategory";
 
 export default function ProductFilter({ products = [] }) {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  
-  const categories = [
-    ...new Map(
-      products.map((item) => {
-        const value = getCategoryValue(item);
-        const label = `${getMainCategoryDa(item)} / ${getMainCategoryEn(item)}`;
+  const categories = products.map((item) => {
+    const value = getCategoryValue(item);
+    const label = getCategoryLabel(item);
 
-        return [value, { value, label }];
-      })
-    ).values(),
-  ];
+    return { value, label };
+  });
 
+  const uniqueCategories = getUniqueByValue(categories);
   const filteredProducts =
     selectedCategory === "All"
       ? products
@@ -29,7 +30,7 @@ export default function ProductFilter({ products = [] }) {
       <Filter
         selectedCategory={selectedCategory}
         onCategoryChange={setSelectedCategory}
-        categories={categories}
+        categories={uniqueCategories}
       />
 
       <p>
