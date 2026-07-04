@@ -1,12 +1,14 @@
 import StoreCard from "@/components/storeCard/StoreCard";
 import ProductGrid from "@/components/ProductGrid/ProductGrid";
 import { getFoodWasteByStoreId } from "@/services/storesService";
+import BackLink from "@/components/ui/BackLink/BackLink";
 
 export default async function StoreDetailsPage({ params }) {
   const { id } = await params;
   const storeData = await getFoodWasteByStoreId(id);
   return (
     <main>
+      <BackLink href={"/stores"} />
       <StoreCard
         name={storeData.store.name}
         id={storeData.store.brand}
