@@ -1,0 +1,43 @@
+.skeleton {
+  display: block;
+  overflow: hidden;
+  background-color: var(--color-background-info);
+  background-image: linear-gradient(
+    to right,
+    var(--color-background-info) 0%,
+    var(--color-background-info) 35%,
+    var(--color-background-page) 50%,
+    var(--color-background-info) 65%,
+    var(--color-background-info) 100%
+  );
+  background-size: 200% 100%;
+  background-position: -100% 0;
+  animation: shimmer 1.2s infinite linear;
+}
+/* Radius */
+
+.radiusSm {
+  border-radius: var(--border-radius-small);
+}
+
+.radiusMd {
+  border-radius: var(--border-radius-medium);
+}
+
+.radiusLg {
+  border-radius: var(--border-radius-large);
+}
+
+.radiusFull {
+  border-radius: var(--border-radius-full);
+}
+
+@keyframes shimmer {
+  from {
+    background-position: -100% 0;
+  }
+
+  to {
+    background-position: 100% 0;
+  }
+}

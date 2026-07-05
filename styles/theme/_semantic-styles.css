@@ -1,0 +1,192 @@
+html {
+  /* 1rem = 10px (62.5% of 16px default) */
+  font-size: 62.5%;
+}
+
+/* ---- scale DOWN ---- */
+
+/* tab-landscape: < 1200px  →  1rem = 9px */
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* tab-portrait: < 900px  →  1rem = 8px */
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* phone: < 600px  →  keep 1rem = 8px (don't go lower or text gets too small) */
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* ---- scale UP ---- */
+
+/* big desktop: > 1800px  →  1rem = 12px */
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+:root {
+  /* ==================== COLORS ==================== */
+  /* Base colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-deep-red: #b3261e;
+
+  /* Backgrounds */
+  --color-background-page: var(--color-white);
+  --color-background-primary: #002747;
+  --color-background-secondary: #93c894;
+  --color-background-error: #f4dada;
+  --color-background-success: #dff5e7;
+  --color-background-accent: #42a866;
+  --color-background-warn: #f6f8af;
+  --color-background-info: #cfe3f0;
+  --color-background-attention: #d58319;
+  --color-background-error-strong: #b3261e;
+
+  /* Text Colors */
+  --color-text-primary: var(--color-black);
+  --color-text-primary-inverse: var(--color-white);
+  --color-text-success: #14612f;
+  --color-text-error: #691212;
+  --color-text-muted: #706868;
+  --color-text-attention: #d58319;
+  --color-text-highlight: #14612f;
+  --color-text-salling: #002747;
+  --color-text-accent: #42a866;
+
+  /* Borders */
+  --color-border-primary: #e1d6d6;
+  --color-border-error: var(--color-deep-red);
+  --color-border-success: #c0e5c1;
+  --color-border-info: #8bb8d6;
+
+  /* Badges */
+
+  /* ==================== TYPOGRAPHY ==================== */
+
+  /* Headline Large */
+  --font-family-headline-large: "Inter", sans-serif;
+  --font-size-headline-large: 3.2rem; /* 32px */
+  --line-height-headline-large: 4rem; /* 40px */
+  --font-weight-headline-large: 800; /* ExtraBold */
+
+  /* Headline Medium */
+  --font-family-headline-medium: "Inter", sans-serif;
+  --font-size-headline-medium: 2rem; /* 20px */
+  --line-height-headline-medium: 3.6rem; /* 36px */
+  --font-weight-headline-medium: 800; /* ExtraBold */
+
+  /* Headline Small */
+  --font-family-headline-small: "Inter", sans-serif;
+  --font-size-headline-small: 1.6rem; /* 16px */
+  --line-height-headline-small: 3.2rem; /* 32px */
+  --font-weight-headline-small: 600; /* SemiBold */
+
+  /* Title Large */
+  --font-family-title-large: "Inter", sans-serif;
+  --font-size-title-large: 1.4rem; /* 14px */
+  --font-weight-title-large: 500; /* Medium */
+  --line-height-title-large: 2rem;
+
+  /* Title Medium */
+  --font-family-title-medium: "Inter", sans-serif;
+  --font-size-title-medium: 1.2rem; /* 12px */
+  --font-weight-title-medium: 500; /* Medium */
+  --line-height-title-medium: 1.6rem;
+
+  /* Label Large */
+  --font-family-label-large: "Inter", sans-serif;
+  --font-size-label-large: 1.5rem; /* 15px */
+  --line-height-label-large: 2rem; /* 20px */
+  --font-weight-label-large: 600; /* SemiBold */
+
+  /* Label Medium */
+  --font-family-label-medium: "Inter", sans-serif;
+  --font-size-label-medium: 1.1rem; /* 11px */
+  --font-weight-label-medium: 500; /* Medium */
+  --line-height-label-medium: 1.6rem;
+
+  /* Label Small */
+  --font-family-label-small: "Inter", sans-serif;
+  --font-size-label-small: 0.9rem; /* 9px */
+  --line-height-label-small: 0.9rem; /* 8px */
+  --font-weight-label-small: 500; /* Medium */
+  --font-weight-label-small-emphasized: 600; /* SemiBold */
+
+  /* Label Extra Small */
+  --font-family-label-extra-small: "Inter", sans-serif;
+  --font-size-label-extra-small: 0.6rem; /* 6px */
+  --font-weight-label-extra-small: 600; /* SemiBold */
+  --font-weight-label-extra-small-emphasized: 800; /* ExtraBold */
+
+  /* Body Large */
+  --font-family-body-large: "Inter", sans-serif;
+  --font-size-body-large: 1.5rem; /* 15px */
+  --line-height-body-large: 2.5rem; /* 25px */
+  --font-weight-body-large: 400; /* Regular */
+  --line-height-body-small: 1.4rem;
+
+  /* Body Small */
+  --font-family-body-small: "Inter", sans-serif;
+  --font-size-body-small: 0.9rem; /* 9px */
+  --font-weight-body-small: 500; /* Medium */
+  --font-weight-body-small-emphasized: 600; /* SemiBold */
+
+  /* Shadows */
+  --shadow-card: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  --shadow-hover: 0 4px 7px rgba(0, 0, 0, 0.2);
+
+  /* Border Radius */
+
+  --border-radius-small: 15px;
+  --border-radius-medium: 18px;
+  --border-radius-large: 20px;
+  --border-radius-full: 999px;
+
+  /* Motion */
+  --transition-fast: 160ms ease;
+  --transition-base: 220ms ease;
+
+  /* Opacity */
+  --opacity-disabled: 0.5;
+
+  /* Spacing */
+  --spacing-2xs: 0.2rem;
+  --spacing-xs: 0.4rem;
+  --spacing-sm: 0.8rem;
+  --spacing-md: 1.6rem;
+  --spacing-lg: 2.4rem;
+  --spacing-xl: 3.2rem;
+  --spacing-2xl: 4.8rem;
+
+  /*  Sizes */
+  --size-icon-xs: 1.2rem;
+  --size-icon-sm: 1.6rem;
+  --size-icon-md: 2.4rem;
+  --size-icon-lg: 3.2rem;
+  --size-icon-xl: 4rem;
+
+  --size-control-sm: 3.2rem;
+  --size-control-md: 4rem;
+  --size-control-lg: 4.8rem;
+  /* Icons */
+  --color-icon-primary: var(--color-black);
+  --color-icon-primary-inverse: var(--color-white);
+  --color-icon-accent: var(--color-deep-red);
+  --color-icon-info: #002747;
+  --color-icon-success: #14612f;
+  /* Avatar */
+  --color-avatar-primary: var(--color-black);
+  --color-avatar-primary-inverse: var(--color-white);
+}
