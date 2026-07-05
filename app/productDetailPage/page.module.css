@@ -12,14 +12,13 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
-  
 }
 .productWrapper {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-.storeWrapper{
+.storeWrapper {
   display: flex;
   justify-content: center;
   width: 100%;
