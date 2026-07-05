@@ -9,7 +9,6 @@ import Message from "@/components/ui/Message/Message";
 import SearchInput from "@/components/ui/SearchInput/SearchInput";
 import { Geolocation } from "@/components/geolocation/Geolocation";
 import InfoSteps from "@/components/infoSteps/InfoSteps";
-// import styles from "./page.module.css";
 
 export default function Home() {
   const router = useRouter();
