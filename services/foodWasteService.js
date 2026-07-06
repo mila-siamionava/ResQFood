@@ -84,5 +84,5 @@ export async function getProductByStoreAndEan(id, ean) {
     store: storeResult.store,
     offer: selectedProduct.offer,
     product: selectedProduct.product,
-  };
+     };
 }

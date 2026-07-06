@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import StoreCard from "@/components/storeCard/StoreCard";
 import ProductDetailCard from "@/components/product/ProductDetailCard";
 import { getProductByStoreAndEan } from "@/services/foodWasteService";
+import dataFormatter from "@/components/storeList/dataFormatter.helper";
 
 export default async function ProductDetailPage({ params }) {
   const { id, productId } = await params;
@@ -15,19 +16,24 @@ export default async function ProductDetailPage({ params }) {
   }
 
   const { store, offer, product } = productData;
+  const formattedStore = dataFormatter(store);
+
+  if (!formattedStore) {
+    notFound();
+  }
 
   return (
     <main>
       <div>
         <div>
           <StoreCard
-            id={store.id}
-            name={store.name}
-            address={store.address.street}
-            openHours={store.openHours}
-            status="open"
-            deals={1}
-            variant="bordered"
+            name={formattedStore.name}
+            id={formattedStore.brand}
+            address={formattedStore.address}
+            distance={formattedStore.distance}
+            openHours={formattedStore.workingHours}
+            status={formattedStore.status}
+            variant="flat"
           />
         </div>
 
