@@ -26,7 +26,7 @@ export default async function ProductDetailPage({ params }) {
   return (
     <main>
       <div>
-        <BackLink href="/stores" />
+       <BackLink href={`/stores/${id}`} />
       </div>
       <div>
         <div>
@@ -36,7 +36,8 @@ export default async function ProductDetailPage({ params }) {
             address={formattedStore.address}
             distance={formattedStore.distance}
             openHours={formattedStore.workingHours}
-            status={formattedStore.status}
+                      status={formattedStore.status}
+                      deals={ 1}
             variant="flat"
           />
         </div>
