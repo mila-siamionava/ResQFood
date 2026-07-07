@@ -9,40 +9,30 @@ import Carousel from "../ui/Carousel/Carousel";
 import Link from "next/link";
 import Filter from "@/components/filter/Filter";
 import {
-  getCategoryLabel,
-  getCategoryValue,
-  getUniqueByValue,
-} from "@/utils/productCategory";
+  filterProductsByCategory,
+  getProductCategories,
+} from "@/utils/filterProduct";
 
 export default function StoreList({ data = [] }) {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const allProducts = data.flatMap((storeResult) => storeResult.clearances);
+ const allProducts = data.flatMap((storeResult) => storeResult.clearances);
 
-  const categories = allProducts.map((item) => {
-    const value = getCategoryValue(item);
-    const label = getCategoryLabel(item);
+const uniqueCategories = getProductCategories(allProducts);
 
-    return { value, label };
-  });
+const filteredStores = data
+  .map((storeResult) => {
+    const filteredClearances = filterProductsByCategory(
+      storeResult.clearances,
+      selectedCategory
+    );
 
-  const uniqueCategories = getUniqueByValue(categories);
-
-  const filteredStores = data
-    .map((storeResult) => {
-      const filteredClearances =
-        selectedCategory === "All"
-          ? storeResult.clearances
-          : storeResult.clearances.filter(
-              (item) => getCategoryValue(item) === selectedCategory
-            );
-
-      return {
-        ...storeResult,
-        clearances: filteredClearances,
-      };
-    })
-    .filter((storeResult) => storeResult.clearances.length > 0);
+    return {
+      ...storeResult,
+      clearances: filteredClearances,
+    };
+  })
+  .filter((storeResult) => storeResult.clearances.length > 0);
 
   return (
     <>
