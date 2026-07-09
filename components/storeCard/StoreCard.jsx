@@ -39,7 +39,7 @@ export default function StoreCard({
             )}
           </div>
           <div className={styles.workingDetails}>
-            <div className={`${styles.circle} ${styles[status]}`}></div>
+            <Badge variant={status} size="md" />
             <p className={styles.openHours}>{openHours}</p>
           </div>
         </div>
