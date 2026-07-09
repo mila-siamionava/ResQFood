@@ -20,13 +20,13 @@
 
 .hackMark.active .animationLayer {
   opacity: 1;
-  animation: dash 1.9s ease-in-out forwards;
+  animation: dash 1.3s ease-in-out forwards;
 }
 
 .hackMark.active .layer2.animationLayer {
-  animation-delay: 1.2s;
+  animation-delay: 1s;
   animation:
-    dash 1.9s ease-in-out forwards,
+    dash 1.3s ease-in-out forwards,
     fillIn 0.7s ease-out 1.5s forwards;
 }
 
@@ -61,7 +61,7 @@
 }
 
 .coverBox.active {
-  width: 0%; /* Shrinks the box, revealing the text left-to-right */
+  width: 0%;
 }
 
 .white {
@@ -77,12 +77,10 @@
   gap: 2rem;
   align-items: center;
   position: absolute;
-  top: 20%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  animation:
-    move 0.8s ease-in-out 4s forwards,
-    shrink 0.8s ease-in-out 5.5s forwards;
+  animation: moveAndShrink 1.5s ease-in-out 4s forwards;
 }
 
 .animationPage {
@@ -93,7 +91,29 @@
   width: 100vw;
   background-color: var(--color-background-primary);
   z-index: 50;
-  animation: fadeOutBg 1.3s ease-in-out 5.5s forwards;
+  animation: fadeOutBg 1.2s ease-in-out 5s forwards;
+}
+
+@keyframes moveAndShrink {
+  0% {
+    /* Starts dead center, full size */
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    /* Arrives at the top-left header position. 
+       Tweak -38vw and -45vh if you need to nudge it slightly left/right/up/down! */
+    transform: translate(-62vw, -54vh) scale(0.4);
+    opacity: 1; /* Stays fully visible while moving */
+    visibility: visible;
+  }
+  100% {
+    /* At the absolute last millisecond, turns invisible so the real header can take over */
+    transform: translate(-62vw, -54vh) scale(0.4);
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 @keyframes move {
@@ -102,24 +122,22 @@
     opacity: 1;
   }
   99% {
-    /* Adjust -40vh to push it exactly to where your header sits */
-    /* Adjust scale(0.3) to match the exact size of your header logo */
-    transform: translate(-50%, -120%) scale(1);
+    transform: translate(-49vw, -30.5vw) scale(1);
     opacity: 1;
   }
   100% {
     /* Instantly hide this fake logo right as the real one appears */
-    transform: translate(-50%, -120%) scale(1);
+    transform: translate(-vw, -30.5vw) scale(1);
   }
 }
 @keyframes shrink {
   0% {
-    transform: translate(-50%, -120%) scale(1);
+    transform: translate(-50vw, -11vw) scale(1);
     opacity: 1;
     visibility: visible;
   }
   100% {
-    transform: translate(-50%, -120%) scale(0.5);
+    transform: translate(-65vw, -12vw) scale(0.5);
     opacity: 0;
     visibility: hidden; /* Completely removes the invisible box from the screen */
   }
