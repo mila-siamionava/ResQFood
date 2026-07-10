@@ -21,6 +21,7 @@ export function Geolocation({ setUserPosition, getError }) {
         className={`${styles.locationButton} location-trigger target-container u-flex-center`}
         onClick={awaitLocation}
         disabled={loading}
+        type="button"
       >
         <AnimatedTargetIcon size={32} />
         <span className={styles.linkText}>
