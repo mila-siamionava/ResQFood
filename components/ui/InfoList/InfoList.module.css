@@ -6,8 +6,8 @@
   width: 100%;
   border: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
-  margin: var(--spacing-lg) 0;
-}
+    margin: var(--spacing-lg) 0 0;
+ }
 
 .list {
   display: flex;
@@ -39,11 +39,21 @@
   font-size: var(--font-size-body-large);
   line-height: var(--line-height-body-large);
 
-  text-align: left;
+  text-align: justify;
   letter-spacing: 0;
 }
 
 .text strong {
   font-weight: 700;
   color: var(--color-text-primary);
+}
+@media (min-width: 768px) {
+  .wrapper {
+    max-width: 58rem;
+  }
+
+  .text {
+    max-width: 56ch;
+    text-wrap: pretty;
+  }
 }

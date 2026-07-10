@@ -82,18 +82,22 @@ export default function Home() {
   return (
     <main>
       <div className="mainPageContainer">
-        <section>
+        <section  className="bannerSection">
           <FrontpageBanner />
         </section>
-        <section>
+
+        <section className="actionSection">
+            <div className="infoBlock">
           {locationError ? (
             <Message type="error">
               {getLocationErrorMessage(locationError)}
             </Message>
           ) : (
             <InfoList />
-          )}
-        </section>
+            )}
+          </div>
+          
+        <div className="searchBlock">
         <section className="findStoresSection">
           <h2 className="findStoresTitle">Find stores near you</h2>
           <SearchInput
@@ -105,12 +109,14 @@ export default function Home() {
             buttonText="Search"
           />
         </section>
-        <section>
+      
           <Geolocation
             setUserPosition={goToStoresByLocation}
             getError={handleLocationError}
           />
-        </section>
+          
+          </div>
+            </section>
         <section>
           <InfoSteps />
         </section>
