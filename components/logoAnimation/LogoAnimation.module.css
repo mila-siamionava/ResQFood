@@ -3,11 +3,12 @@
   display: flex;
   align-items: center;
   color: var(--color-background-secondary);
+  flex-shrink: 0;
 }
 
 .hackMark svg {
-  height: 12rem;
-  width: 12rem;
+  height: 8rem;
+  width: 8rem;
 }
 
 .hackMark.active {
@@ -41,12 +42,13 @@
 
 .logoText {
   font-family: var(--font-family-headline-large);
-  font-size: 8rem;
+  font-size: 6rem;
   font-weight: 600;
   position: relative;
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .coverBox {
@@ -74,13 +76,13 @@
 
 .animationContainer {
   display: flex;
-  gap: 2rem;
+  gap: 1.2rem;
   align-items: center;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 40%;
   transform: translate(-50%, -50%) scale(1);
-  animation: moveAndShrink 1s ease-in-out 3s forwards;
+  animation: moveAndShrinkMobile 1s ease-in-out 3s forwards;
 }
 
 .animationPage {
@@ -94,7 +96,7 @@
   animation: fadeOutBg 1.2s ease-in-out 3.8s forwards;
 }
 
-@keyframes moveAndShrink {
+@keyframes moveAndShrinkMobile {
   0% {
     /* Starts dead center, full size */
     transform: translate(-50%, -50%) scale(1);
@@ -104,42 +106,15 @@
   99% {
     /* Arrives at the top-left header position. 
        Tweak -38vw and -45vh if you need to nudge it slightly left/right/up/down! */
-    transform: translate(-62vw, -54vh) scale(0.4);
+    transform: translate(-55vw, -50vh) scale(0.66);
     opacity: 1; /* Stays fully visible while moving */
     visibility: visible;
   }
   100% {
     /* At the absolute last millisecond, turns invisible so the real header can take over */
-    transform: translate(-62vw, -53.7vh) scale(0.4);
+    transform: translate(-55vw, -50vh) scale(0.66);
     opacity: 1;
     /* visibility: hidden; */
-  }
-}
-
-@keyframes move {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-  }
-  99% {
-    transform: translate(-49vw, -30.5vw) scale(1);
-    opacity: 1;
-  }
-  100% {
-    /* Instantly hide this fake logo right as the real one appears */
-    transform: translate(-vw, -30.5vw) scale(1);
-  }
-}
-@keyframes shrink {
-  0% {
-    transform: translate(-50vw, -11vw) scale(1);
-    opacity: 1;
-    visibility: visible;
-  }
-  100% {
-    transform: translate(-65vw, -12vw) scale(0.5);
-    opacity: 0;
-    visibility: hidden; /* Completely removes the invisible box from the screen */
   }
 }
 
@@ -165,5 +140,40 @@
   }
   to {
     fill: var(--color-background-secondary);
+  }
+}
+
+@media (min-width: 768px) {
+  .hackMark svg {
+    height: 12rem;
+    width: 12rem;
+  }
+
+  .logoText {
+    font-size: 7.8rem;
+  }
+
+  .animationContainer {
+    gap: 2rem;
+    left: 50%;
+    animation: moveAndShrink 1s ease-in-out 3s forwards;
+  }
+
+  @keyframes moveAndShrink {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+      visibility: visible;
+    }
+    99% {
+      transform: translate(-60.8vw, -52.4vh) scale(0.42);
+      opacity: 1;
+      visibility: visible;
+    }
+    100% {
+      transform: translate(-60.8vw, -52.4vh) scale(0.42);
+      opacity: 1;
+      /* visibility: hidden; */
+    }
   }
 }
