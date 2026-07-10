@@ -82,34 +82,44 @@ export default function Home() {
   return (
     <main>
       <div className="mainPageContainer">
-      <section>
-        <FrontpageBanner />
-      </section>
-      <section>
-        {locationError ? (
-          <Message type="error">{getLocationErrorMessage(locationError)}</Message>
-        ) : (
-          <InfoList />
-        )}
-      </section>
-      <section>
-        <SearchInput
-          onSearch={goToStoresBySearch}
-          error={searchError}
-          placeholder="Enter zip code (4 - 5 digits)"
-          inputMode="numeric"
-          maxLength={5}
-        />
-      </section>
-      <section>
-        <Geolocation
-          setUserPosition={goToStoresByLocation}
-          getError={handleLocationError}
-        />
-      </section>
-      <section>
-        <InfoSteps />
-      </section>
+        <section  className="bannerSection">
+          <FrontpageBanner />
+        </section>
+
+        <section className="actionSection">
+            <div className="infoBlock">
+          {locationError ? (
+            <Message type="error">
+              {getLocationErrorMessage(locationError)}
+            </Message>
+          ) : (
+            <InfoList />
+            )}
+          </div>
+          
+        <div className="searchBlock">
+        <section className="findStoresSection">
+          <h2 className="findStoresTitle">Find stores near you</h2>
+          <SearchInput
+            onSearch={goToStoresBySearch}
+            error={searchError}
+            placeholder="Enter zip code (4 - 5 digits)"
+            inputMode="numeric"
+            maxLength={5}
+            buttonText="Search"
+          />
+        </section>
+      
+          <Geolocation
+            setUserPosition={goToStoresByLocation}
+            getError={handleLocationError}
+          />
+          
+          </div>
+            </section>
+        <section>
+          <InfoSteps />
+        </section>
       </div>
     </main>
   );
