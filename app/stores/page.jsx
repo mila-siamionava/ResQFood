@@ -36,10 +36,6 @@ export default async function Stores({ searchParams }) {
         <p>{errorMessage}</p>
       ) : (
         <>
-          <p className="storeList-subHeading">
-            {storeData.length} stores found
-          </p>
-
           <StoreList data={storeData} />
         </>
       )}

@@ -15,14 +15,16 @@ export default function StoreList({ data = [] }) {
 
   return (
     <>
-      <Filter
-        selectedCategory={selectedCategory}
-        onCategoryChange={setSelectedCategory}
-        categories={categories}
-      />
-
-      <p>
-        Showing {filteredStores.length} of {data.length} stores
+      <div className={styles.filterContainer}>
+        <Filter
+          selectedCategory={selectedCategory}
+          onCategoryChange={setSelectedCategory}
+          categories={categories}
+        />
+      </div>
+      <p className={styles.storesCount}>
+        Showing <span className={styles.green}>{filteredStores.length}</span> of{" "}
+        {data.length} stores
       </p>
 
       {filteredStores.length === 0 ? (
