@@ -25,7 +25,7 @@
 
 .storesCount {
   margin-left: 1rem;
-  color: var(--color-text-salling);
+  color: var(--color-text-info);
   font-family: var(--font-family-body-large);
   font-size: var(--font-size-body-large);
   line-height: var(--line-height-body-large);

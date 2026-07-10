@@ -63,7 +63,7 @@ html {
   --color-text-muted: #706868;
   --color-text-attention: #d58319;
   --color-text-highlight: #14612f;
-  --color-text-salling: #002747;
+  --color-text-info: #002747;
   --color-text-accent: #42a866;
   --color-text-closing: #8a4b00;
 
@@ -80,10 +80,10 @@ html {
   /* ==================== TYPOGRAPHY ==================== */
 
   /* Headline ExtraLarge */
-  --font-family-headline-extraLarge: "Inter", sans-serif;
-  --font-size-headline-extraLarge: 5.2rem; /* 32px */
-  --line-height-headline-extraLarge: 4rem; /* 40px */
-  --font-weight-headline-extraLarge: 800; /* ExtraBold */
+  --font-family-headline-extra-large: "Inter", sans-serif;
+  --font-size-headline-extra-large: 5.2rem; /* 32px */
+  --line-height-headline-extra-large: 4rem; /* 40px */
+  --font-weight-headline-extra-large: 800; /* ExtraBold */
 
   /* Headline Large */
   --font-family-headline-large: "Inter", sans-serif;

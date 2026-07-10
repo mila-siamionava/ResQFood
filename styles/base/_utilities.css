@@ -48,7 +48,7 @@
 }
 
 .storeList-heading {
-  color: var(--color-text-salling);
+  color: var(--color-text-info);
   font-family: var(--font-family-headline-large);
   font-size: var(--font-size-headline-large);
   line-height: var(--line-height-headline-large);
