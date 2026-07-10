@@ -137,7 +137,7 @@ html {
   /* Label Extra Small */
   --font-family-label-extra-small: "Inter", sans-serif;
   --font-size-label-extra-small: 1.2rem; /* 6px */
-  --line-height-label-extra-small: 1.6rem;
+  --line-height-label-extra-small: 1.35rem;
   --font-weight-label-extra-small: 600; /* SemiBold */
   --font-weight-label-extra-small-emphasized: 800; /* ExtraBold */
 
