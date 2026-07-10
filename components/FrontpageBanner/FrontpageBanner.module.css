@@ -67,7 +67,7 @@
 }
 
 .partnershipText {
-  color: var(--color-text-salling);
+  color: var(--color-text-info);
 
   font-size: clamp(0.8rem, 1.4vw, 1.2rem);
   font-weight: 500;
@@ -97,7 +97,7 @@
 
 .sallingText {
   font-weight: 900;
-  color: var(--color-text-salling);
+  color: var(--color-text-info);
   margin: 0;
   line-height: 1;
 }

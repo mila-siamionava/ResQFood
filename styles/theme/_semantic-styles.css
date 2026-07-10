@@ -51,7 +51,7 @@ html {
   --color-background-accent: #42a866;
   --color-background-warn: #f6f8af;
   --color-background-info: #cfe3f0;
-  --color-background-attention: #d58319;
+  --color-background-attention: #e6bb82;
   --color-background-error-strong: #b3261e;
   --color-background-action: #14612f;
 
@@ -63,7 +63,7 @@ html {
   --color-text-muted: #706868;
   --color-text-attention: #d58319;
   --color-text-highlight: #14612f;
-  --color-text-salling: #002747;
+  --color-text-info: #002747;
   --color-text-accent: #42a866;
   --color-text-closing: #8a4b00;
 
@@ -78,6 +78,12 @@ html {
   /* Badges */
 
   /* ==================== TYPOGRAPHY ==================== */
+
+  /* Headline ExtraLarge */
+  --font-family-headline-extra-large: "Inter", sans-serif;
+  --font-size-headline-extra-large: 5.2rem; /* 32px */
+  --line-height-headline-extra-large: 4rem; /* 40px */
+  --font-weight-headline-extra-large: 800; /* ExtraBold */
 
   /* Headline Large */
   --font-family-headline-large: "Inter", sans-serif;
