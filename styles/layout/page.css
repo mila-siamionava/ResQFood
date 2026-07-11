@@ -3,7 +3,7 @@
   --page-gap: clamp(1.6rem, 2.4vw, 3.2rem);
   --cta-control-width: min(100%, 28rem);
   --page-max-width: 104rem;
-  --content-max-width: 96rem;
+  --content-max-width: 100rem;
 }
 
 body {
@@ -59,7 +59,7 @@ section {
   font-size: var(--font-size-label-large);
 }
 
-@media (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 768px) {
   .mainPageContainer {
     padding: 0 3vw;
   }
