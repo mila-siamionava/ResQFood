@@ -9,12 +9,6 @@
   border-radius: var(--border-radius-small);
   box-shadow: var(--shadow-card);
   font-family: var(--font-family-headline-medium);
-  background: linear-gradient(
-    145deg,
-    rgba(243, 203, 203, 0.3) 0%,
-    rgba(210, 245, 223, 0.3) 52%,
-    rgba(195, 220, 237, 0.3) 100%
-  );
 }
 
 .infoStepText {
@@ -70,4 +64,12 @@
   text-align: center;
   max-width: clamp(5rem, 15vw, 9rem);
   letter-spacing: 0.3px;
+}
+
+@media (min-width: 768px) {
+  .infoSteps {
+    padding: var(--spacing-lg) var(--spacing-md);
+    border: none;
+    box-shadow: none;
+  }
 }
