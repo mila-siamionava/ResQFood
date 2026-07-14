@@ -1,6 +1,7 @@
 .form {
   width: 100%;
 }
+
 .inputGroup {
   display: flex;
   align-items: stretch;
@@ -30,7 +31,7 @@
 
 .input::placeholder {
   color: var(--color-text-muted);
-  font-size: var(--font-size-body-small);
+  font-size: var(--font-size-body-medium);
 }
 
 .input:focus {
@@ -74,6 +75,10 @@
 
 @media (min-width: 768px) {
   .input {
+    font-size: var(--font-size-body-small);
+  }
+
+  .input::placeholder {
     font-size: var(--font-size-body-small);
   }
 }

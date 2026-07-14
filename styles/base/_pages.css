@@ -81,9 +81,9 @@
   border-radius: var(--border-radius-small);
   background-color: var(--color-background-neutral);
   color: var(--color-text-primary);
-  font-family: var(--font-family-label-small);
-  font-size: var(--font-size-label-small);
-  line-height: var(--line-height-label-small);
+  font-family: var(--font-family-label-large);
+  font-size: var(--font-size-label-large);
+  line-height: var(--line-height-label-large);
   text-align: center;
 }
 
@@ -196,5 +196,10 @@
     margin: 0;
     padding: 3rem;
     gap: var(--spacing-lg);
+  }
+
+  .togetherText {
+    font-size: var(--font-size-label-small);
+    line-height: var(--line-height-label-small);
   }
 }

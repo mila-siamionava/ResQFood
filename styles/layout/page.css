@@ -51,8 +51,9 @@ section {
   flex-direction: column;
   gap: 3rem;
   align-items: center;
-  width: 90vh;
-  height: 90vw;
+  justify-content: center;
+  width: 90vw;
+  height: 90vh;
   background-color: var(--color-background-page);
   padding: 3rem;
   margin: 0 auto;
