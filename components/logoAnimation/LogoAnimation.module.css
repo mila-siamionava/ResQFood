@@ -50,7 +50,7 @@
   align-items: center;
   position: absolute;
   top: 50%;
-  left: 40%;
+  left: 50%;
   transform: translate(-50%, -50%) scale(1);
   animation: moveAndShrinkMobile 1s ease-in-out 3s forwards;
 }
