@@ -2,8 +2,7 @@ export default function manifest() {
   return {
     name: "ResQFood",
     short_name: "ResQFood",
-    description:
-      "Find discounted food nearby and help reduce food waste.",
+    description: "Find discounted food nearby and help reduce food waste.",
 
     start_url: "/",
     scope: "/",
@@ -13,7 +12,7 @@ export default function manifest() {
     background_color: "#ffffff",
     theme_color: "#1f6b45",
 
-   // orientation: "portrait-primary",
+    // orientation: "portrait-primary",
 
     icons: [
       {
@@ -26,13 +25,7 @@ export default function manifest() {
         src: "/icons/icon-512x512.png",
         sizes: "512x512",
         type: "image/png",
-        purpose: "any",
-      },
-      {
-        src: "/icons/maskable-icon-512x512.png",
-        sizes: "512x512",
-        type: "image/png",
-        purpose: "maskable",
+        purpose: "any maskable",
       },
     ],
   };
